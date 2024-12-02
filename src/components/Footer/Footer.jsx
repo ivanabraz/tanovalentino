@@ -7,7 +7,8 @@ const Footer = () => {
         <footer 
             className="pt-8 pb-12 px-4 sm:px-6 w-full h-16 
             flex justify-between 
-            text-sm text-black bg-white"
+            text-sm text-black bg-white
+            drop-shadow-md"
         >
             <p>© {currentYear} Ghiotto Pizza</p>
         </footer>

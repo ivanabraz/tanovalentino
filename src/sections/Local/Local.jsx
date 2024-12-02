@@ -9,7 +9,7 @@ const Local = () => {
             <img 
                 src={heroImg} 
                 alt={'Foto pizza'} 
-                className="w-[90%] h-[40vh] object-cover m-auto rounded-3xl object-bottom" 
+                className="xs:w-[100%] md:w-[70%] lg:w-[70%] xs:h-[40vh] md:h-[50vh] p-4 object-cover m-auto rounded-3xl object-center" 
             />
             <motion.div
                 initial={{ opacity: 0, y: 50 }}

@@ -56,9 +56,9 @@ const Menu = () => {
     const groupedMenuData = groupByCategory(menuData);
 
     return (
-        <div id="menu" className="w-full text-red-500 my-16 text-left justify-center pt-10">
+        <div id="menu" className="w-full text-red-500 my-16 text-left justify-center pt-10 xs:p-4">
             <p className="text-4xl mb-14 text-center">Menú</p>
-            <div className="xs:w-[100%] md:w-[70%] flex flex-row content-start m-auto xs:p-2">
+            <div className="xs:w-[100%] md:w-[70%] flex flex-row content-start m-auto">
                 <div className="uppercase w-[25%] sticky top-28 self-start">
                     {Object.keys(groupedMenuData).map((categoria) => (
                         <div key={categoria}>
