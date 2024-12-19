@@ -6,7 +6,7 @@
 
     const NavBarDesktop = ({ navigation, scrolled }) => {
     return (
-        <nav className={`fixed top-0 flex w-full h-fit hidden lg:grid grid-cols-9 px-28 py-4 z-40 justify-center items-start text-center uppercase transition-all duration-300 ${scrolled ? 'bg-white fixed drop-shadow-md' : ''}`}>
+        <nav className={`fixed top-0 flex w-full h-fit hidden lg:grid grid-cols-9 px-28 py-4 z-40 justify-center items-start text-center uppercase transition-all duration-300 ${scrolled ? 'bg-tanoWhite fixed drop-shadow-md' : ''}`}>
         <div className="col-span-2 flex justify-start">
             <NavBarLogo />
         </div>
@@ -16,14 +16,14 @@
                     <a 
                         href={`#${page.href}`}
                         className={`transition-all duration-700 ease-in-out border-b border-transparent 
-                            ${scrolled ? 'hover:border-black text-black' : 'hover:border-white text-white'}`}
+                            ${scrolled ? 'hover:border-black text-black' : 'hover:border-tanoWhite text-tanoWhite'}`}
                     >
                         {page.name}
                     </a>
                 </div>
             ))}
             <OpenClosed 
-                textColor={scrolled ? "text-black" : "text-white"} 
+                textColor={scrolled ? "text-black" : "text-tanoWhite"} 
                 customClass="self-start text-left" 
             />
         </div>
@@ -33,7 +33,7 @@
                 <a 
                 key={uuidv4()}
                 href={"https://" + page.href}
-                className={`hover:text-gray-400 transition-colors ${scrolled ? 'text-black' : 'text-white'}`}
+                className={`hover:text-gray-400 transition-colors ${scrolled ? 'text-black' : 'text-tanoWhite'}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 >

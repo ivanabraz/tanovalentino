@@ -1,6 +1,6 @@
     import React from "react";
 
-    const OpenClosed = ({ textColor = "text-white", customClass = "" }) => {
+    const OpenClosed = ({ textColor = "text-tanoWhite", customClass = "" }) => {
     const getStatus = () => {
         const now = new Date();
         const day = now.getDay();
@@ -16,13 +16,13 @@
         return {
             status: "CERRADO",
             message: "Te esperamos mañana",
-            color: "text-red-400",
+            color: "text-tano-600",
         };
         } else if (isClosedDay || !isOpenTime) {
         return {
             status: "CERRADO",
             message: isClosedDay ? "Te esperamos mañana" : `Te esperamos ${nextOpeningTime}`,
-            color: "text-red-400",
+            color: "text-tano-600",
         };
         } else {
         return {

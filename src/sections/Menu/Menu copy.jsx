@@ -105,10 +105,10 @@ const Menu = () => {
                                         <span className="text-xs text-stone-400">{item.Descripción}</span>
                                     </div>
                                     <div className="font-semibold text-center text-stone-600">
-                                        {item.Chica ? (typeof item.Chica === "number" ? `$${item.Chica}` : item.Chica) : ""}
+                                        {item.Chica ? `$${item.Chica}` : ""}
                                     </div>
                                     <div className="font-semibold text-center text-stone-600">
-                                        {item.Grande ? (typeof item.Grande === "number" ? `$${item.Grande}` : item.Grande) : "—"}
+                                        {item.Grande ? `$${item.Grande}` : "—"}
                                     </div>
                                 </div>
                             ))}

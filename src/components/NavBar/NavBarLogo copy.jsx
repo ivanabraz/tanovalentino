@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // IMAGES
-const logoWhite = `${process.env.PUBLIC_URL}/images/logo/logo-white.svg`;
-const logoOrange = `${process.env.PUBLIC_URL}/images/logo/logo-orange.svg`;
+const logo = `${process.env.PUBLIC_URL}/images/logo/logo-white.svg`;
 
 const NavBarLogo = (props) => {
     const { customClassName } = props;
@@ -34,9 +33,9 @@ const NavBarLogo = (props) => {
         <div className={`flex w-100 ${customClassName || ''}`}>
             <Link to="#" onClick={handleScrollToTop}>
                 <img 
-                    src={scrolled ? logoOrange : logoWhite} 
+                    src={logo} 
                     alt="Logo" 
-                    className="h-14 transition-all duration-300"
+                    className={`h-14 transition-all duration-300 ${scrolled ? 'invert' : ''}`}
                 />
             </Link>
         </div>

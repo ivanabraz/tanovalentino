@@ -30,7 +30,6 @@ const NavBar = () => {
             {/* Versión Mobile */}
             <div className="fixed flex w-full justify-between h-16 lg:hidden mx-auto px-4 sm:px-6 items-center z-10">
                 <NavBarMobile
-                    logo={`${process.env.PUBLIC_URL}/images/logo/logo.svg`}
                     navigation={navigation}
                     scrolled={scrolled}
                 />
@@ -38,7 +37,7 @@ const NavBar = () => {
 
             {/* Versión Desktop */}
             <NavBarDesktop
-                logo={`${process.env.PUBLIC_URL}/images/logo/logo.svg`}
+                logo={`${process.env.PUBLIC_URL}/images/logo/logo-white.svg`}
                 navigation={navigation}
                 scrolled={scrolled}
             >
@@ -47,7 +46,7 @@ const NavBar = () => {
                         <a
                             key={section.href}
                             href={`#${section.href}`}
-                            className="hover:text-red-400 cursor-pointer"
+                            className="hover:text-tano-400 cursor-pointer"
                         >
                             {section.name}
                         </a>

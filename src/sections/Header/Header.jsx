@@ -11,12 +11,12 @@ const Header = () => {
                 alt={'Foto pizza'} 
                 className="absolute top-0 left-0 w-full h-full object-cover -z-10" 
             />
-            <div className="relative z-1 text-center px-20 py-10 mt-24">
+            <div className="relative z-1 text-center px-10 md:px-20 py-10">
                 <motion.p
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 2, ease: "easeInOut" }}
-                    className='text-white relative z-0
+                    className='text-tanoWhite relative z-0
                     text-5xl md:text-6xl lg:text-7xl xl:text-8xl
                     px-1 md:px-4 lg:px-5 xl:px-5'
                     style={{ zIndex: 0 }}

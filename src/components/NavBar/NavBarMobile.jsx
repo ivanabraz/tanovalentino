@@ -5,16 +5,19 @@
     import NavBarLogo from "./NavBarLogo";
     import OpenClosed from "./OpenClosed";
 
-    const NavBarMobile = ({ logo, navigation, scrolled }) => {
+    // IMAGES
+    const logo = `${process.env.PUBLIC_URL}/images/logo/logo-orange.svg`;
+
+    const NavBarMobile = ({navigation, scrolled }) => {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-        <nav className={`w-full flex flex-row justify-between fixed top-0 left-0 z-100 py-5 px-10 ${scrolled ? 'bg-white' : 'bg-transparent'}`}>
+        <nav className={`w-full flex flex-row justify-between fixed top-0 left-0 z-100 py-5 px-10 ${scrolled ? 'bg-tanoWhite' : 'bg-transparent'}`}>
             {/* Botón burger */}
             <button 
             type="button" 
-            className={`${scrolled ? 'text-black' : 'text-white'}`} 
+            className={`${scrolled ? 'text-black' : 'text-tanoWhite'}`} 
             onClick={() => setOpen(true)}
             >
             <Bars3Icon className="h-8 w-8" aria-hidden="true" />
@@ -22,7 +25,7 @@
 
             {/* Logo */}
             <div className={`mt-1`}>
-            <NavBarLogo/>
+                <NavBarLogo/>
             </div>
 
             <div></div>
@@ -30,8 +33,8 @@
 
         {/* Menú Mobile */}
         {open && (
-            <div className="fixed inset-0 flex z-50 lg:hidden">
-            <div className="relative w-full bg-white p-6 flex flex-col overflow-y-auto transform transition-transform duration-300">
+            <div className="fixed inset-0 flex z-50 lg:hidden bg-tanoWhite">
+            <div className="relative w-full bg- p-6 flex flex-col overflow-y-auto transform transition-transform duration-300">
                 {/* Botón para cerrar el menú */}
                 <div className="flex justify-start mb-10 relative z-10">
                 <button
@@ -45,7 +48,7 @@
 
                 <div className="w-full h-full m-auto content-center">
                 {/* Logo */}
-                <img src={logo} alt="Logo" className="invert h-12 m-auto mb-20" />
+                <img src={logo} alt="Logo" className="h-12 m-auto mb-20" />
                 {/* Links de navegación */}
                 <div className="space-y-12 text-center relative">
                     {navigation.sections.map((item) => (
@@ -69,7 +72,7 @@
                         href={`https://${item.href}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-black hover:text-gray-600"
+                        className="text-black hover:text-tano-900"
                         onClick={() => setOpen(false)}
                     >
                         <FontAwesomeIcon icon={item.icon} size="xl" />
